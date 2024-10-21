@@ -1,0 +1,79 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+}
+
+.wheel-container {
+    position: relative;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    background: conic-gradient(
+    #ff6b6b 0 30deg, #ffe66d 30deg 60deg, #4ecdc4 60deg 90deg,
+    #ff6b6b 90deg 120deg, #ffe66d 120deg 150deg, #4ecdc4 150deg 180deg,
+    #ff6b6b 180deg 210deg, #ffe66d 210deg 240deg, #4ecdc4 240deg 270deg,
+    #ff6b6b 270deg 300deg, #ffe66d 300deg 330deg, #4ecdc4 330deg 360deg
+    );
+    transition: transform 5s ease-out;
+}
+
+.wheel .marker {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid red;
+}
+
+.wheel-labels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.label {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center center;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
